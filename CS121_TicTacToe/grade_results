@@ -1,0 +1,204 @@
+----------------------
+Testing TicTacToeGame 
+----------------------
+
+Total Tests Run: 219 of 219,  Passed: 219 (100.0%),  Failed: 0
+
+
+
+SCENARIO: testNewGame
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 7 of 219,  Passed: 7 (3.2%),  Failed: 0
+
+SCENARIO: testX00
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 14 of 219,  Passed: 14 (6.4%),  Failed: 0
+
+SCENARIO: testX00O10
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 21 of 219,  Passed: 21 (9.6%),  Failed: 0
+
+SCENARIO: testX00O10X11
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 28 of 219,  Passed: 28 (12.8%),  Failed: 0
+
+SCENARIO: testX00O10X11O22
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 35 of 219,  Passed: 35 (16.0%),  Failed: 0
+
+SCENARIO: testX00O10X11O22X02
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 42 of 219,  Passed: 42 (19.2%),  Failed: 0
+
+SCENARIO: testX00O10X11O22X02O01
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 49 of 219,  Passed: 49 (22.4%),  Failed: 0
+
+SCENARIO: testX00O10X11O22X02O01X21
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 56 of 219,  Passed: 56 (25.6%),  Failed: 0
+
+SCENARIO: testX00O10X11O22X02O01X21O20
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 63 of 219,  Passed: 63 (28.8%),  Failed: 0
+
+SCENARIO: testX00O10X11O22X02O01X21O20X12
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 70 of 219,  Passed: 70 (32.0%),  Failed: 0
+
+SCENARIO: testX02O10X00O22X01
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 77 of 219,  Passed: 77 (35.2%),  Failed: 0
+
+SCENARIO: testX11O00X10O22X12
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 84 of 219,  Passed: 84 (38.4%),  Failed: 0
+
+SCENARIO: testX22O00X20O12X21
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 91 of 219,  Passed: 91 (41.6%),  Failed: 0
+
+SCENARIO: testX00O11X20O12X10
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 98 of 219,  Passed: 98 (44.7%),  Failed: 0
+
+SCENARIO: testX01O10X21O12X11
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 105 of 219,  Passed: 105 (47.9%),  Failed: 0
+
+SCENARIO: testX12O11X02O21X22
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 112 of 219,  Passed: 112 (51.1%),  Failed: 0
+
+SCENARIO: testX11O02X22O12X00
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 119 of 219,  Passed: 119 (54.3%),  Failed: 0
+
+SCENARIO: testX20O01X11O00X02
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 126 of 219,  Passed: 126 (57.5%),  Failed: 0
+
+SCENARIO: testX10O01X20O02X11O00
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 133 of 219,  Passed: 133 (60.7%),  Failed: 0
+
+SCENARIO: testX00O10X20O12X01O11
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 140 of 219,  Passed: 140 (63.9%),  Failed: 0
+
+SCENARIO: testX00O21X10O20X01O22
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 147 of 219,  Passed: 147 (67.1%),  Failed: 0
+
+SCENARIO: testX22O10X11O00X01O20
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 154 of 219,  Passed: 154 (70.3%),  Failed: 0
+
+SCENARIO: testX00O01X22O11X10O21
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 161 of 219,  Passed: 161 (73.5%),  Failed: 0
+
+SCENARIO: testX11O02X00O22X10O12
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 168 of 219,  Passed: 168 (76.7%),  Failed: 0
+
+SCENARIO: testX01O00X10O11X21O22
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 175 of 219,  Passed: 175 (79.9%),  Failed: 0
+
+SCENARIO: testX00O11X10O20X21O02
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 182 of 219,  Passed: 182 (83.1%),  Failed: 0
+
+SCENARIO: testX01O12X00O02X10O20X11O21X22
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 189 of 219,  Passed: 189 (86.3%),  Failed: 0
+
+SCENARIO: testO01X12O00X02O10X20O11X21O22
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 196 of 219,  Passed: 196 (89.5%),  Failed: 0
+
+SCENARIO: testX00O10X11NewGame
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 203 of 219,  Passed: 203 (92.7%),  Failed: 0
+
+SCENARIO: testX01O12X00O02X10O20X11O21X22NewGame
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 210 of 219,  Passed: 210 (95.9%),  Failed: 0
+
+SCENARIO: testO01X12O00X02O10X20O11X21O22NewGame
+
+
+Section Tests: 7,  Passed: 7,  Failed: 0
+Tests Run So Far: 217 of 219,  Passed: 217 (99.1%),  Failed: 0
+
+SCENARIO: testEncapsulation
+
+
+Section Tests: 2,  Passed: 2,  Failed: 0
+Tests Run So Far: 219 of 219,  Passed: 219 (100.0%),  Failed: 0
+----------------------------------------------------------------
+
+Total Tests Run: 219 of 219,  Passed: 219 (100.0%),  Failed: 0
+
+

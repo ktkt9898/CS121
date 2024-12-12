@@ -1,0 +1,730 @@
+rm: cannot remove '*.class': No such file or directory
+
+***************************************************
+INITIAL SETUP
+***************************************************
+
+---------------------------------
+Download and Unpack Support Files
+---------------------------------
+--2024-04-11 15:57:47--  https://github.com/BoiseState/CS121-Public/raw/master/projects/p3-textbook3/p3-textbook.zip
+Resolving github.com (github.com)... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/BoiseState/CS121-Public/master/projects/p3-textbook3/p3-textbook.zip [following]
+--2024-04-11 15:57:47--  https://raw.githubusercontent.com/BoiseState/CS121-Public/master/projects/p3-textbook3/p3-textbook.zip
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 12647 (12K) [application/zip]
+Saving to: ‘p3-textbook.zip’
+
+     0K .......... ..                                         100% 38.5M=0s
+
+2024-04-11 15:57:47 (38.5 MB/s) - ‘p3-textbook.zip’ saved [12647/12647]
+
+Archive:  p3-textbook.zip
+  inflating: PostInterface.java      
+  inflating: PostUnitTester.java     
+  inflating: TextBookInterface.java  
+  inflating: TextBookUnitTester.java  
+------------------
+Testing Post.java 
+------------------
+
+Post created.
+Post not found.
+PASSED: testConstructorNewPost
+    testConstructorNewPost - new Post(42,"AdaLovelace","I've created something special")
+    testConstructorNewPost - recover valid Post(42)
+    testConstructorNewPost - recover invalid Post(2147483647)
+Post created.
+PASSED: testGetFilename
+    testGetFilename - matches expected filename
+Post created.
+PASSED: testGetPostID
+    testGetPostID - matches post ID
+Post created.
+PASSED: testGetAuthor
+    testGetAuthor - matches post author
+Post created.
+PASSED: testGetText
+    testGetText - matches post text
+Post created.
+PASSED: testGetTimestamp
+    testGetTimestamp - valid ISO-8601 timestamp
+Post created.
+PASSED: testAddComment
+    testAddComment - no exceptions when adding comments
+    testAddComment - comments appear in Post file
+Post created.
+PASSED: testToStringPostOnly
+    testToStringPostOnly - returns a single line
+    testToStringPostOnly - includes postID as first value
+    testToStringPostOnly - includes ISO-8601 timestamp as second value
+    testToStringPostOnly - includes author as third value
+    testToStringPostOnly - includes post text
+Post created.
+PASSED: testToString
+    testToString - expected line count
+    testToString - second line contains well-formmated whitespace-separated post values
+    testToString - fourth line matches first comment
+    testToString - fifth line matches second comment
+    testToString - sixth line matches third comment
+    testToString - seventh line matches fourth comment
+
+Passed 9 of 9 tests (100.0%)
+
+
+---------------------
+Testing TextBook.java 
+---------------------
+
+Post created.
+Post created.
+Post created.
+FAILED: testConstructor
+    testConstructor - new TextBook(), no prior postIDs.txt
+    (error): testConstructor - recovering TextBook from file
+        --> expected: First Post recovered with author AdaLovelace
+        -->   actual: Kyle
+Post created.
+Post created.
+Post created.
+PASSED: testAddPost
+    testAddPost - first Post
+    testAddPost - second Post
+    testAddPost - third Post
+    testAddPost - postIDs.txt
+Post created.
+Post created.
+Post created.
+PASSED: testRemovePost
+    testRemovePost - invalid index -1
+    testRemovePost - invalid index 3
+    testRemovePost - valid index 2 (last post)
+    testRemovePost - postIDs.txt after removePost(2) / id 2
+    testRemovePost - valid index 0 (first post)
+    testRemovePost - postIDs.txt after removePost(0) / id 1
+    testRemovePost - valid index 0 (last remaining post, originally second post)
+    testRemovePost - postIDs.txt after removePost(0) / id 2
+Post created.
+Post created.
+Post created.
+PASSED: testAddComment
+    testAddComment - invalid index -1
+    testAddComment - invalid index 3
+    testAddComment - valid index 0 (first post)
+    testAddComment - valid index 2 (third post)
+Post created.
+Post created.
+Post created.
+PASSED: testGetLastID
+    testGetLastID - no pre-existing postIDs.txt file
+    testGetLastID - after 3 Posts added
+    testGetLastID - after recovering TextBook from file
+Post created.
+Post created.
+PASSED: testGetPostCount
+    testGetPostCount - new empty TextBook
+    testGetPostCount - after adding one Post
+    testGetPostCount - after adding second Post
+    testGetPostCount - after removing second Post
+    testGetPostCount - after removing last remaining Post
+Post created.
+Post created.
+Post created.
+PASSED: testGetPostString
+    testGetPostString - invalid index -1
+    testGetPostString - invalid index 3
+    testGetPostString - valid index 0 (first post)
+    testGetPostString - valid index 1 (second post)
+    testGetPostString - valid index 2 (third post)
+Post created.
+Post created.
+PASSED: testToString
+    testToString - first line reports number of posts
+    testToString - second line shows first Post at index 0
+    testToString - third line shows second Post at index 1
+Post created.
+Post created.
+Post created.
+PASSED: testGetPosts
+    testGetPosts - length of returned list
+    testGetPosts - all expected Posts included and in order
+    testGetPosts - returning a copy of Posts list (preserving encapsulation)
+
+Passed 8 of 9 tests (88.88888888888889%)
+
+FAIL reason: TextBookUnitTester failed
+
+------------------------------
+Compiling TextBookDriver.java 
+------------------------------
+
+***************************************************
+EMPTY TEXTBOOK TESTS
+***************************************************
+
+
+-------------
+Test (p)rint 
+-------------
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	TextBook contains 0 posts:
+	
+	Input "M" to return to menu.
+	Exiting TextBook.
+-->Expected: some version of empty list and clean exit
+-----------------------
+(p)rint test complete 
+-----------------------
+
+--------------
+Test (d)elete 
+--------------
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Please select a known post element ID to delete.
+	Invalid ID, please print TextBook for reference by inputting "P".
+	Exiting TextBook.
+-->Expected: some message that there is no post at index 0 and clean exit
+-----------------------
+(d)elete test complete 
+-----------------------
+
+---------------
+Test (c)omment 
+---------------
+Exception in thread "main" java.util.NoSuchElementException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:945)
+	at java.base/java.util.Scanner.next(Scanner.java:1486)
+	at TextBookDriver.main(TextBookDriver.java:81)
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add comment to post selected.
+	Enter known post ID:
+	Post not found.
+	Enter text to be displayed:
+	Input "M" to return to menu.
+-->Expected: some message that there is no post at index 0 and clean exit
+-----------------------
+(c)omment test complete 
+-----------------------
+
+--------------
+Test (r)ead   
+--------------
+Exception in thread "main" java.lang.NumberFormatException: For input string: "2024-04-11T21:57:49.822513234Z"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at Post.<init>(Post.java:103)
+	at TextBookDriver.main(TextBookDriver.java:146)
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Read post and post's comments selected.
+	Enter known post ID:
+-->Expected: some message that there is no post at index 0 and clean exit
+-----------------------
+(r)ead test complete 
+-----------------------
+
+***************************************************
+ADD POST & COMMENTS AND READ TESTS
+***************************************************
+
+
+--------------------
+Test (a)dd, (p)rint 
+--------------------
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	TextBook contains 1 posts:
+	0 - 00001 2024-04-11T21:57:49.919635760Z Aviva Test Post 1
+	
+	Input "M" to return to menu.
+	Exiting TextBook.
+-->Expected: well formatted list showing this new post at index 0 and clean exit
+-----------------------------
+(a)dd, (p)rint test complete 
+-----------------------------
+
+---------------------
+Test (a)dd, (r)ead 0 
+---------------------
+Exception in thread "main" java.lang.NumberFormatException: For input string: "2024-04-11T21:57:49.822513234Z"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at Post.<init>(Post.java:103)
+	at TextBookDriver.main(TextBookDriver.java:146)
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Read post and post's comments selected.
+	Enter known post ID:
+-->Expected: full text of post file 'Test Post 1' and clean exit
+--------------------------------
+(a)dd, (r)ead 0 test complete  
+--------------------------------
+
+----------------------------------
+Test (a)dd, (c)omment 0, (r)ead 0 
+----------------------------------
+Exception in thread "main" java.lang.NumberFormatException: For input string: "2024-04-11T21:57:49.822513234Z"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at Post.<init>(Post.java:103)
+	at TextBookDriver.main(TextBookDriver.java:124)
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add comment to post selected.
+	Enter known post ID:
+-->Expected: full text of post file 'Test Post 1' with one comment and clean exit
+----------------------------------------
+(a)dd, (c)omment 0, (r)ead 0 test complete  
+----------------------------------------
+
+-----------------------------------------------
+Test (a)dd, (c)omment 0, (c)omment 0, (r)ead 0 
+-----------------------------------------------
+Exception in thread "main" java.lang.NumberFormatException: For input string: "2024-04-11T21:57:49.822513234Z"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at Post.<init>(Post.java:103)
+	at TextBookDriver.main(TextBookDriver.java:124)
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add comment to post selected.
+	Enter known post ID:
+-->Expected: full text of post file 'Test Post 1' with 2 comments and clean exit
+---------------------------------------------------------------------------------
+(a)dd, (c)omment 0, (c)omment 0, (r)ead 0 test complete  
+---------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+Test (a)dd, (c)omment 0, (a) add, (c)omment 0, (c) comment 1 (with space), (r)ead 1, (r)ead 0  
+-----------------------------------------------------------------------------------------------
+Exception in thread "main" java.lang.NumberFormatException: For input string: "2024-04-11T21:57:49.822513234Z"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at Post.<init>(Post.java:103)
+	at TextBookDriver.main(TextBookDriver.java:124)
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add comment to post selected.
+	Enter known post ID:
+-->Expected: full text of post file 'Test Post 2' with 1 comments, followed by full text of post file 'Test Post 1' with 2 comments and clean exit
+-------------------------------------------------------------------------------------------
+(a)dd, (c)omment 0, (a) add, (c)omment 0, (c) comment 1, (r)ead 1, (r)ead 0 test complete  
+-------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------
+Test (a)dd, (c)omment 0, (a) add, (c)omment 0, (c) comment 1, (r)ead 1, (r)ead 0  
+----------------------------------------------------------------------------------
+Exception in thread "main" java.lang.NumberFormatException: For input string: "2024-04-11T21:57:49.822513234Z"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at Post.<init>(Post.java:103)
+	at TextBookDriver.main(TextBookDriver.java:124)
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add comment to post selected.
+	Enter known post ID:
+-->Expected: full text of post file 'Test Post 2' with 1 comments, followed by full text of post file 'Test Post 1' with 2 comments and clean exit
+-------------------------------------------------------------------------------------------
+(a)dd, (c)omment 0, (a) add, (c)omment 0, (c) comment 1, (r)ead 1, (r)ead 0 test complete  
+-------------------------------------------------------------------------------------------
+
+-----------------------------------------
+Test (a)dd, (p)rint, (d)elete 0, (p)rint 
+-----------------------------------------
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	TextBook contains 1 posts:
+	0 - 00001 2024-04-11T21:57:50.314980406Z Aviva Test Post 1
+	
+	Input "M" to return to menu.
+	Please select a known post element ID to delete.
+	Input "M" to return to menu.
+	TextBook contains 0 posts:
+	
+	Input "M" to return to menu.
+	Exiting TextBook.
+-->Expected: well formatted list showing post at index 0, then some version of empty list and clean exit
+--------------------------------------------------
+(a)dd, (p)rint, (d)elete 0, (p)rint test complete 
+--------------------------------------------------
+
+---------------------------
+Test (a)dd, (a)dd, (p)rint 
+---------------------------
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	TextBook contains 2 posts:
+	0 - 00001 2024-04-11T21:57:50.378545925Z Aviva Test Post 1
+	1 - 00002 2024-04-11T21:57:50.392344893Z Aviva Test Post 2
+	
+	Input "M" to return to menu.
+	Exiting TextBook.
+-->Expected: well formatted list showing indexed list of two posts and clean exit
+-------------------------------------
+(a)dd, (a)dd, (p)rint test complete  
+-------------------------------------
+
+----------------------------
+Test (a)dd, (a)dd, (r)ead 0 
+----------------------------
+Exception in thread "main" java.lang.NumberFormatException: For input string: "2024-04-11T21:57:49.822513234Z"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at Post.<init>(Post.java:103)
+	at TextBookDriver.main(TextBookDriver.java:146)
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Read post and post's comments selected.
+	Enter known post ID:
+-->Expected: full text of 'Test Post 1' post and clean exit
+-------------------------------------
+(a)dd, (a)dd, (r)ead 0 test complete 
+-------------------------------------
+
+-------------------------------------------
+Test (a)dd, (a)dd, (r)ead 1 
+-------------------------------------------
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Read post and post's comments selected.
+	Enter known post ID:
+	Displaying post: 1
+	Post:
+	00001 2024-04-11T21:57:50.378545925Z Aviva Test Post 1 
+	Comments:
+	00001 2024-04-11T21:57:50.453726950Z Aviva Test Post 1
+	00001 2024-04-11T21:57:50.522983495Z Aviva Test Post 1
+	
+	Input "M" to return to menu.
+	Exiting TextBook.
+-->Expected: full text of 'Test Post 2' post and clean exit
+----------------------------------------------------
+(a)dd, (a)dd, (r)ead 1 test complete 
+----------------------------------------------------
+
+---------------------------------------
+Test (a)dd, (a)dd, (d)elete 0, (p)rint 
+---------------------------------------
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Please select a known post element ID to delete.
+	Input "M" to return to menu.
+	TextBook contains 1 posts:
+	0 - 00002 2024-04-11T21:57:50.602815352Z Aviva Test Post 2
+	
+	Input "M" to return to menu.
+	Exiting TextBook.
+-->Expected: list showing 'Test Post 2' at index 0 and clean exit
+------------------------------------------------
+(a)dd, (a)dd, (d)elete 0, (p)rint test complete 
+------------------------------------------------
+
+---------------------------------------
+Test (a)dd, (a)dd, (d)elete 1, (p)rint 
+---------------------------------------
+	Welcome to TextBook. Please enter username with no spaces.
+	Aviva, welcome to TextBook. Please select a menu choice.
+	----------------------
+	TextBook Site Menu
+	----------------------
+	Input "M" to prompt the menu again.
+	(P)rint TextBook posts
+	(A)dd a new post
+	(D)elete a post
+	(C)omment on a post
+	(R)ead a post and comments
+	(Q)uit TextBook
+	----------------------
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Add post selected.
+	----------------------
+	Enter text to be displayed:
+	Post created.
+	----------------------
+	Input "M" to return to menu.
+	Please select a known post element ID to delete.
+	Input "M" to return to menu.
+	TextBook contains 1 posts:
+	0 - 00001 2024-04-11T21:57:50.656472691Z Aviva Test Post 1
+	
+	Input "M" to return to menu.
+	Exiting TextBook.
+-->Expected: list showing 'Test Post 1' at index 0 and clean exit
+------------------------------------------------
+(a)dd, (a)dd, (d)elete 1, (p)rint test complete 
+------------------------------------------------
+
